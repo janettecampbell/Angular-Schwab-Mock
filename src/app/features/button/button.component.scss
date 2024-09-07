@@ -1,0 +1,24 @@
+:host {
+  position: relative;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+  padding: 5px 15px;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: fit-content;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  outline: none;
+  overflow: hidden;
+  transition: background-color 0.1s ease;
+  background-color: #b95e04;
+  white-space: nowrap;
+  cursor: pointer;
+  &:hover {
+    background-color: #c86706;
+  }
+}

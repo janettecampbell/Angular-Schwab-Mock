@@ -1,0 +1,95 @@
+.nav-wrapper {
+  background: linear-gradient(#435562, #344551);
+  display: flex;
+  justify-content: center;
+  height: 95px;
+}
+
+nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  background-color: #009ddb;
+  color: #ffffff;
+  height: 95px;
+  width: 88px;
+  font-size: x-large;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.no-bullet {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.no-bullet a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.no-bullet li {
+  float: left;
+  text-align: center;
+  padding: 16px;
+}
+
+.nav-top-menu {
+  position: relative;
+  display: flex;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  font-size: small;
+  margin-right: 0;
+  margin-left: auto;
+  top: 0;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.nav-top-menu .no-bullet img {
+  height: 12px;
+  width: 12px;
+  padding-right: 5px;
+}
+
+.nav-top-menu .no-bullet .login-arrow {
+  padding-left: 5px;
+  height: 10px;
+  width: 10px;
+}
+
+.nav-bottom-bar {
+  display: flex;
+  
+}
+
+.nav-bottom-menu {
+  position: relative;
+  display: block;
+  color: #ffffff;
+  line-height: 22px;
+  text-align: center;
+  float: left;
+  bottom: 0;
+  width: 100%;
+}
+
+.menus {
+  width: 100%;
+}
