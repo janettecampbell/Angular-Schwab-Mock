@@ -6,6 +6,7 @@ import {
   MatDialogClose,
   MatDialogContent,
   MatDialogTitle,
+  MatDialogConfig,
 } from '@angular/material/dialog';
 import { AccountsAndProductsComponent } from './dialogs/accounts-and-products/accounts-and-products.component';
 import { ButtonComponent } from '../../features/button/button.component';
@@ -22,10 +23,10 @@ export class NavbarNotLoggedInComponent {
   readonly dialog = inject(MatDialog);
 
   openDialogAccounts() {
-    this.dialog.open(AccountsAndProductsComponent, {
-      width: "1000px",
-      maxWidth: "none",
 
+    this.dialog.open(AccountsAndProductsComponent, {
+      width: '1000px',
+      maxWidth: 'none',
     });
   }
 }
