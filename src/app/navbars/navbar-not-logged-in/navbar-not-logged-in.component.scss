@@ -93,3 +93,7 @@ nav a {
 .menus {
   width: 100%;
 }
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  filter: drop-shadow( 30px 10px 4px #6a6a6a);
+}
