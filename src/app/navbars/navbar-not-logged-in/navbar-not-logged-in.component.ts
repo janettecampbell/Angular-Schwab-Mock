@@ -17,7 +17,6 @@ import {
 } from '@angular/material/dialog';
 import { AccountsAndProductsComponent } from './dialogs/accounts-and-products/accounts-and-products.component';
 import { ButtonComponent } from '../../features/button/button.component';
-import { NavbarNotLoggedInService } from '../../services/dialogs/navbar-not-logged-in.service';
 import { AdviceComponent } from './dialogs/advice/advice.component';
 import { PricingComponent } from './dialogs/pricing/pricing.component';
 import { WhyComponent } from './dialogs/why/why.component';
@@ -33,12 +32,6 @@ import { LearnComponent } from './dialogs/learn/learn.component';
 })
 export class NavbarNotLoggedInComponent {
   readonly dialog = inject(MatDialog);
-  dialogService = inject(NavbarNotLoggedInService);
-  // accounts = AccountsAndProductsComponent;
-  // advice = AdviceComponent;
-  // price = PricingComponent;
-  // why = WhyComponent;
-  // learn = LearnComponent;
 
   openDialogAccount(event: MouseEvent): void {
     this.dialog.closeAll()
