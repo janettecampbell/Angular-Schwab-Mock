@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.login-wrapper {
+  width: 90%;
+}
+
+.login-form {
+  float: right;
+  margin-top: 10px;
+}
+
+.login-input {
+  margin-left: 10px;
+}
+
+.login-button {
+  border-radius: 5px;
+  background-color: #005f83;
+  color: #ffffff;
+  border: 1px solid #005f83;
+  text-align: center;
+  width: fit-content;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 18px 20px;
+  margin-left: 10px;
+}

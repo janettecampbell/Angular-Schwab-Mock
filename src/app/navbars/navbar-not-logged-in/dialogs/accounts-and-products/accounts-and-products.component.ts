@@ -25,5 +25,9 @@ import { ButtonComponent } from '../../../../features/button/button.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AccountsAndProductsComponent {
+  readonly dialog = inject(MatDialog);
 
+  closeDialog () {
+    this.dialog.closeAll()
+  }
 }

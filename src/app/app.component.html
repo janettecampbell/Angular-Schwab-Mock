@@ -1,10 +1,13 @@
 <header>
-  <app-navbar-not-logged-in />
+  @if (isLoggedIn) {
+    <app-navbar-logged-in />
+  } @else {
+    <app-navbar-not-logged-in />
+  }
 </header>
 <main>
-  
+  <router-outlet />
 </main>
 <footer>
-
+  <app-footer-not-logged-in />
 </footer>
-<router-outlet />

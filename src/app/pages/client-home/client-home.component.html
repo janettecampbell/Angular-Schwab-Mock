@@ -1,0 +1,25 @@
+<section class="wrapper">
+  <div class="login-wrapper">
+    <form [formGroup]="login" (ngSubmit)="onLogin()" class="login-form">
+      <mat-form-field appearance="outline" class="login-input">
+        <mat-label>Login ID</mat-label>
+        <input matInput placeholder="Login ID" formControlName="login_ID"/>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="login-input">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide() ? 'password' : 'text'" formControlName="password"/>
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="clickEvent($event)"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide()"
+        >
+          <mat-icon>{{ hide() ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <button class="login-button" type="submit">Log In</button>
+    </form>
+  </div>
+</section>

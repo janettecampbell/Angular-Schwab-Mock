@@ -1,6 +1,6 @@
 <div class="nav-wrapper">
   <nav>
-    <a href="/">
+    <a href="/client-home">
       <div class="nav-logo">
         <p>Mock</p>
         <p>Site</p>
@@ -34,11 +34,11 @@
       <div class="nav-bottom-bar">
         <div class="nav-bottom-menu">
           <ul class="no-bullet">
-            <li (mouseover)="openDialogAccounts()" #accounts>Accounts & Products</li>
-            <li>Advice</li>
-            <li>Pricing</li>
-            <li>Why Schwab</li>
-            <li>Learn</li>
+            <li (mouseover)="openDialogAccount($event)">Accounts & Products</li>
+            <li (mouseover)="openDialogAdvice($event)">Advice</li>
+            <li (mouseover)="openDialogPrice($event)">Pricing</li>
+            <li (mouseover)="openDialogWhy($event)">Why Schwab</li>
+            <li (mouseover)="openDialogLearn($event)">Learn</li>
           </ul>
         </div>
         <app-button>Open an Account</app-button>

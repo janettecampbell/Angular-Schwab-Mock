@@ -1,0 +1,90 @@
+.footer-wrapper {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.footer-content-wrapper {
+  width: 90%;
+  display: block;
+  justify-content: center;
+}
+
+.footer-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-top-bar .social-media img {
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.oyt img {
+  height: 35px;
+  margin-top: 5px;
+}
+
+.footer-menu-main {
+  display: flex;
+  justify-content: center;
+}
+
+.col {
+  font-size: 13px;
+  white-space: nowrap;
+  margin-right: auto;
+}
+
+.col h1 {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.col li {
+  list-style: none;
+}
+
+.col li a {
+  text-decoration: none;
+  color: #026d97;
+}
+
+.col li a:hover {
+  text-decoration: underline;
+}
+
+.footer-information {
+  margin: 20px auto;
+}
+
+.footer-information ul {
+  list-style: none;
+  color: #344551;
+  font-size: 12px;
+}
+
+.footer-information li {
+  display: inline-block;
+  margin: 2px;
+}
+
+.footer-information li:not(:last-child)::after {
+  content: "|";
+  font-size: 12px;
+  color: #bfbfbf;
+  margin-left: 2px;
+}
+
+.footer-information a {
+  text-decoration: none;
+  color: #344551;
+}
+
+.footer-information a:hover {
+  text-decoration: underline;
+}
