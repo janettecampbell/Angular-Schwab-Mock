@@ -1,10 +1,26 @@
-import { Component, ChangeDetectionStrategy, signal, OnInit } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  signal,
+  OnInit,
+  inject,
+} from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { provideHttpClient } from '@angular/common/http';
-import { ReactiveFormsModule, FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {
+  ReactiveFormsModule,
+  FormControl,
+  FormGroup,
+  FormBuilder,
+  Validators,
+} from '@angular/forms';
+import { LoginService } from '../../service/login/login.service';
+import { response } from 'express';
+import { LoginRequest } from '../../interfaces/login-request';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-client-home',
@@ -20,12 +36,14 @@ import { ReactiveFormsModule, FormControl, FormGroup, FormBuilder, Validators } 
   styleUrl: './client-home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ClientHomeComponent implements OnInit{
-  constructor(private formBuilder: FormBuilder){}
+export class ClientHomeComponent implements OnInit {
+  loginService = inject(LoginService);
+  router = inject(Router);
+  constructor(private formBuilder: FormBuilder) {}
 
   // Initialize FormGroup
   login = new FormGroup({
-    loginID: new FormControl<string>(''),
+    login_ID: new FormControl<string>(''),
     password: new FormControl<string>(''),
   });
 
@@ -40,20 +58,27 @@ export class ClientHomeComponent implements OnInit{
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     this.login = this.formBuilder.group({
-      loginID: ["", Validators.required],
-      password: ["", Validators.required]
-    })
-    
+      login_ID: ['', Validators.required],
+      password: ['', Validators.required],
+    });
   }
 
-  onSubmit () {
+  onLogin() {
     this.login.markAllAsTouched();
     const isFormValid = this.login.valid;
     let isLoggedin = false;
     if (isFormValid) {
-      
+      this.loginService.login(this.login.value as LoginRequest).subscribe(
+        (response) => {
+          isLoggedin = true;
+          localStorage.setItem('token', JSON.stringify(response));
+          this.router.navigate(['/clientapps/accounts/summary']);
+        },
+        (error) => {
+          console.error('Error:', error);
+        }
+      );
     }
     const loginValue = this.login.value;
-    
   }
 }

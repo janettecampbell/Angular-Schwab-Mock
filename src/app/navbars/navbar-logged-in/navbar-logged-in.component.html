@@ -1,0 +1,35 @@
+<div class="nav-wrapper">
+  <nav>
+    <a href="/clientapps/accounts/summary">
+      <div class="nav-logo">
+        <p>Mock</p>
+        <p>Site</p>
+      </div>
+    </a>
+    <div class="menus-wrapper">
+      <div class="menu-main">
+        <ul>
+          @for (title of mainMenu; track title) {
+            <li [class.active]="currentlyActive === title.title">{{title.title}}</li>
+          }
+        </ul>
+      </div>
+      <div class="nav-utilities">
+        <ul>
+          <li><img src="/search.png" alt="search icon" /></li>
+          <li><img src="/envelope.png" alt="messages icon" /></li>
+          <li><img src="/headphones.png" alt="contact us icon" /></li>
+          <li><img src="/profile.png" alt="account icon" /></li>
+          <li>Log Out</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sub-menu">
+      <ul>
+        @for (route of subMenu; track route.title) {
+          <li><a routerLink={{route.route}} routerLinkActive="sub-active" [routerLinkActiveOptions]="{exact: true}">{{route.title}}</a></li>
+        }
+      </ul>
+    </div>
+  </nav>
+</div>

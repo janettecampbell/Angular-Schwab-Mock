@@ -1,9 +1,9 @@
-<div class="wrapper">
+<section class="wrapper">
   <div class="login-wrapper">
-    <form [formGroup]="login" (ngSubmit)="onSubmit()" class="login-form">
+    <form [formGroup]="login" (ngSubmit)="onLogin()" class="login-form">
       <mat-form-field appearance="outline" class="login-input">
         <mat-label>Login ID</mat-label>
-        <input matInput placeholder="Login ID" formControlName="loginID"/>
+        <input matInput placeholder="Login ID" formControlName="login_ID"/>
       </mat-form-field>
 
       <mat-form-field appearance="outline" class="login-input">
@@ -22,4 +22,4 @@
       <button class="login-button" type="submit">Log In</button>
     </form>
   </div>
-</div>
+</section>

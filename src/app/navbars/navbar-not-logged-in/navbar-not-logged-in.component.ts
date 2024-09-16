@@ -41,9 +41,6 @@ export class NavbarNotLoggedInComponent {
     const liElement = event.target as HTMLElement;
     const liRect = liElement.getBoundingClientRect();
 
-    console.log('liRect', liRect);
-    console.log('liElement', liElement);
-
     // Set the dialog under the li menu element
     dialogConfig.position = {
       top: `${liRect.bottom}px`,
@@ -63,9 +60,6 @@ export class NavbarNotLoggedInComponent {
     // Get the position of the li menu element
     const liElement = event.target as HTMLElement;
     const liRect = liElement.getBoundingClientRect();
-
-    console.log('liRect', liRect);
-    console.log('liElement', liElement);
 
     // Set the dialog under the li menu element
     dialogConfig.position = {
@@ -87,9 +81,6 @@ export class NavbarNotLoggedInComponent {
     const liElement = event.target as HTMLElement;
     const liRect = liElement.getBoundingClientRect();
 
-    console.log('liRect', liRect);
-    console.log('liElement', liElement);
-
     // Set the dialog under the li menu element
     dialogConfig.position = {
       top: `${liRect.bottom}px`,
@@ -109,9 +100,6 @@ export class NavbarNotLoggedInComponent {
     // Get the position of the li menu element
     const liElement = event.target as HTMLElement;
     const liRect = liElement.getBoundingClientRect();
-
-    console.log('liRect', liRect);
-    console.log('liElement', liElement);
 
     // Set the dialog under the li menu element
     dialogConfig.position = {
@@ -133,9 +121,6 @@ export class NavbarNotLoggedInComponent {
     // Get the position of the li menu element
     const liElement = event.target as HTMLElement;
     const liRect = liElement.getBoundingClientRect();
-
-    console.log('liRect', liRect);
-    console.log('liElement', liElement);
 
     // Set the dialog under the li menu element
     dialogConfig.position = {
