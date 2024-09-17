@@ -1,0 +1,45 @@
+.col-wrapper {
+  display: flex;
+  flex: 0 0 auto;
+  width: fit-content;
+}
+
+.col {
+  width: 250px;
+  line-height: 22px;
+  float: left;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+.col:not(:last-child) {
+  border-right: 1px solid #ced6dd;
+}
+
+.col ul {
+  list-style: none;
+}
+
+.col li {
+  padding: 20px 50px 20px 20px;
+}
+
+.col li a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #344551;
+  padding: 20px 45px 20px 20px;
+}
+
+.col li a:hover {
+  background: #70818f14;
+}
+
+.active {
+  color: #006e99 !important;
+  background-color: #e5f8ff;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  padding: 0 !important;
+}

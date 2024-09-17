@@ -1,0 +1,26 @@
+<div class="col-wrapper" (mouseleave)="closeDialog()">
+  <div class="col">
+    <ul>
+      @for (route of column1; track route.title) {
+      <li>
+        <a
+          routerLink="{{ route.route }}"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >{{ route.title }}</a
+        >
+      </li>
+      }
+    </ul>
+  </div>
+  <div class="col">
+    <ul>
+     <li></li>
+    </ul>
+  </div>
+  <div class="col">
+    <ul>
+      <li></li>
+    </ul>
+  </div>
+</div>

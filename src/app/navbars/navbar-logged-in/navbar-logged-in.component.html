@@ -9,9 +9,23 @@
     <div class="menus-wrapper">
       <div class="menu-main">
         <ul>
-          @for (title of mainMenu; track title) {
-            <li [class.active]="currentlyActive === title.title">{{title.title}}</li>
-          }
+          @for (item of mainMenu; track item.title) { @if (item.title ===
+          "Accounts") {
+          <li
+            #firstMenuItem
+            (mouseover)="openDialog($event, item.component)"
+            [class.active]="currentlyActive === item.title"
+          >
+            {{ item.title }}
+          </li>
+          } @else {
+          <li
+            (mouseover)="openDialog($event, item.component)"
+            [class.active]="currentlyActive === item.title"
+          >
+            {{ item.title }}
+          </li>
+          } }
         </ul>
       </div>
       <div class="nav-utilities">
@@ -26,8 +40,15 @@
     </div>
     <div class="sub-menu">
       <ul>
-        @for (route of subMenu; track route.title) {
-          <li><a routerLink={{route.route}} routerLinkActive="sub-active" [routerLinkActiveOptions]="{exact: true}">{{route.title}}</a></li>
+        @for (route of currentLinks; track route.title) {
+        <li>
+          <a
+            routerLink="{{ route.route }}"
+            routerLinkActive="sub-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ route.title }}</a
+          >
+        </li>
         }
       </ul>
     </div>

@@ -27,7 +27,7 @@ import { ButtonComponent } from '../../../../features/button/button.component';
 export class AccountsAndProductsComponent {
   readonly dialog = inject(MatDialog);
 
-  closeDialog () {
-    this.dialog.closeAll()
+  closeDialog() {
+    this.dialog.closeAll();
   }
 }

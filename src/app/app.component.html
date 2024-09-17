@@ -9,5 +9,9 @@
   <router-outlet />
 </main>
 <footer>
-  <app-footer-not-logged-in />
+  @if (isLoggedIn) {
+    <app-footer-logged-in></app-footer-logged-in>
+  } @else {
+    <app-footer-not-logged-in />
+  }
 </footer>
